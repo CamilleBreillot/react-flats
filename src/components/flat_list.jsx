@@ -4,7 +4,19 @@ import Flat from './flat';
 class FlatList extends Component {
   render() {
     return (
-      <div>Hello flatlist</div>
+      <div className="flat-list">
+        {this.props.flats.map((flat, index) => {
+          return (
+            <Flat
+              flat={flat}
+              key={flat.lat}
+              index={index}
+            />
+          );
+        })
+        }
+;
+      </div>
     );
   }
 }

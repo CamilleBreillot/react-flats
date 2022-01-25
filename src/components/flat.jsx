@@ -5,10 +5,10 @@ class Flat extends Component {
     return (
       <div className="card">
         <div className='card-category'>
-          <p></p>
+          {this.props.flat.price} {this.props.flat.priceCurrency}
         </div>
         <div className="card-description">
-          <h2></h2>
+          <h2>{this.props.flat.name}</h2>
         </div>
         <div className="card-link">
         </div>

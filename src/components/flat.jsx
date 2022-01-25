@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 class Flat extends Component {
+
+  handleClick = (event) => {
+    event.currentTarget.parentElement.classList.toggle("active");
+  }
+
   render() {
     return (
       <div className="card" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('${this.props.flat.imageUrl}')`}}>
@@ -10,8 +15,7 @@ class Flat extends Component {
         <div className="card-description">
           <h2>{this.props.flat.name}</h2>
         </div>
-        <div className="card-link">
-        </div>
+        <a className="card-link" href="#" onClick={this.handleClick} ></a>
       </div>
     );
   }

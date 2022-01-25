@@ -4,11 +4,21 @@ import FlatList from './flat_list';
 import flats from '../../data/flats';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      flats,
+      selectedFlat: flats[0]
+    };
+  }
   render() {
 
     return (
       <div>
-        <FlatList flats={flats}/>
+        <FlatList
+          flats={this.state.flats}
+          selectedFlat={this.state.selectedFlat}
+        />
         <div className="map-container">
           <GoogleMapReact />
         </div>
@@ -16,5 +26,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;

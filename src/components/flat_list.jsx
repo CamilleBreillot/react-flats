@@ -1,0 +1,12 @@
+import React, { Component } from 'react';
+import Flat from './flat';
+
+class FlatList extends Component {
+  render() {
+    return (
+      <div>Hello flatlist</div>
+    );
+  }
+}
+
+export default FlatList;

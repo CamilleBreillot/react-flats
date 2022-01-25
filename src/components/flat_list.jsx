@@ -9,7 +9,8 @@ class FlatList extends Component {
           flat={flat}
           key={flat.lat}
           index={index}
-          selected={this.props.selectedFlat}
+          selected={flat.name === this.props.selectedFlat.name}
+          selectFlat={this.props.selectFlat}
         />
       );
     });
